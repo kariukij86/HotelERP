@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HotelERP
@@ -16,7 +13,9 @@ namespace HotelERP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Framework.StartUp();
+            var form = (Form)Framework.provider.GetService(typeof(Login));
+            Application.Run(form);
         }
     }
 }
