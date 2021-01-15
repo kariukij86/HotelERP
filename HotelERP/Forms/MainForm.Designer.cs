@@ -29,12 +29,31 @@ namespace HotelERP
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.MainContent = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // MainContent
+            // 
+            this.MainContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainContent.Location = new System.Drawing.Point(0, 0);
+            this.MainContent.Name = "MainContent";
+            this.MainContent.Size = new System.Drawing.Size(800, 450);
+            this.MainContent.TabIndex = 0;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MainContent);
+            this.Name = "MainForm";
             this.Text = "MainForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel MainContent;
     }
 }
